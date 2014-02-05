@@ -1,0 +1,117 @@
+/* Font Sizes */
+.fs12 { font-size: 12px; }
+.fs14 { font-size: 14px; }
+.fs16 { font-size: 16px; }
+.fs18 { font-size: 18px; }
+.fs20 { font-size: 20px; }
+.fs22 { font-size: 22px; }
+.fs24 { font-size: 24px; }
+
+/* Line Heights */
+.lh16 { line-height: 16px; }
+.lh18 { line-height: 18px; }
+.lh20 { line-height: 20px; }
+.lh22 { line-height: 22px; }
+.lh24 { line-height: 24px; }
+.lh26 { line-height: 26px; }
+.lh28 { line-height: 28px; }
+
+/* Headline Styles */
+
+/* Headline Sizes */
+h1, .h1 { font-size: 24px; line-height: 28px; }
+h2, .h2 { font-size: 22px; line-height: 26px; }
+h3, .h3 { font-size: 20px; line-height: 24px; }
+h4, .h4 { font-size: 18px; line-height: 22px; }
+h5, .h5 { font-size: 16px; line-height: 20px; }
+h6, .h6 { font-size: 14px; line-height: 18px; }
+
+/* Headline Fonts */
+h1, .h1{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;
+}
+h2, .h2{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;
+}
+h3, .h3{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;
+}
+h4, .h4{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;
+}
+h5, .h5{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;
+}
+h6, .h6{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;
+}
+
+/* Generic Font Styles */
+.ff-trebu{
+	font-family: "Trebuchet MS",
+             Tahoma,
+             Arial,
+             sans-serif;	
+}
+.ff-cgoth{
+	font-family: "Century Gothic",
+             "Lucida Grande",
+             "Lucida Sans",
+             "Bitstream Vera Sans",
+             Verdana;	
+}
+.ff-palat{
+	font-family: "Palatino Linotype",
+             Palatino,
+             "URW Palladio L",
+             "Book Antiqua",
+             Baskerville,
+             "Bookman Old Style",
+             "Bitstream Charter",
+             "Nimbus Roman No9 L",
+             Garamond,
+             "New Century Schoolbook",
+             "Century Schoolbook",
+             "Century Schoolbook L",
+             Georgia,
+             serif;
+}
+.ff-corbe{
+	font-family: Corbel,
+             "Lucida Grande",
+             "Lucida Sans Unicode",
+             "Lucida Sans",
+             "DejaVu Sans",
+             "Bitstream Vera Sans",
+             "Liberation Sans",
+             Verdana,
+             sans-serif;
+}
+ff-cambr{
+	font-family: Cambria,
+             "Hoefler Text",
+             Utopia,
+             "Liberation Serif",
+             "Nimbus Roman No9 L",
+             Times,
+             "Times New Roman",
+             serif;
+}

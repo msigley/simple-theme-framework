@@ -1,0 +1,286 @@
+@charset utf-8;
+/*
+Theme Name: Martini Custom Framework
+Theme URI: http://whiteboardframework.com/
+Author: Bold Perspective
+Author URI: http://boldperspective.com/
+Description: The Whiteboard Famework for Wordpress is built to speed up the process of developing a Wordpress theme. Whiteboard does so by eliminating the time spent on Wordpress' backend PHP by including what is common to all Wordpress powered Web sites with nothing extra.
+Version: 3.1.3
+
+ * Built on the Whiteboard Framework
+ * http://whiteboardframework.com
+ */
+
+/*
+ * The Whiteboard Framework is licensed under the GPL license.
+ * Feel free to use the Whiteboard Framework for commercial and non-commercial ventures.
+ * We require a link in the CSS file and request a link on the website
+*/
+
+/*
+List of divs in Whiteboard
+Note that this list does not include the dynamically generated ids and classes, such as the body classes, the post ids, etc
+*/
+
+/*
+NOTE: This stylesheet should only include styles pertaining to visual elements of the website, not the overall layout and positioning of the containing elements on the site. 
+Examples of appropriate styles to be put here include:
+	* Backgrounds
+	* Font styles
+	* Content Styles for ul, ol, a, etc.
+	
+Also references to the HTML5 layout tags should be made whenever possible to support future browser features.
+HTML5 layout tags used:
+	* header
+	* nav
+	* article (this tag wraps the main content of the website)
+	* footer
+*/
+
+body{
+	
+}
+
+#wrapper {
+	
+}
+
+/*-----Header Styles-----*/
+header {
+	background: #333;
+}
+
+/*-----Navigation Styles-----*/
+#nav-primary {
+	background: #666;	
+}
+#nav-primary .menu li {
+	border-right: 1px solid #333;	
+}
+#nav-primary .menu li.last-menu-item {
+	border-right: none;	
+}
+#nav-primary .menu a{
+	color: #fff;	
+}
+#nav-primary .menu a:hover{
+	background: #eee;
+	color: #333;
+}
+#nav-primary .menu li ul{
+	background: #555;	
+}
+
+.downarrowclass{
+	background: url('images/icons/downarrow.gif') top left no-repeat transparent;
+	width: 11px;
+	height: 8px;
+}
+
+.rightarrowclass{
+	background: url('images/icons/rightarrow.gif') top left no-repeat transparent;
+	width: 8px;
+	height: 11px;
+}
+
+#nav-primary nav.subpages{
+	background: #555;
+}
+
+/*-----Slider Styles-----*/
+#bighead {
+	background: #ccc;	
+}
+
+/*-----Content Styles-----*/
+#content-wrap {	
+}
+
+#content {
+	background: #eee;	
+}
+article {
+	
+}
+.featured-thumbnail {
+	
+}
+.post-content {
+	
+}
+.pagination {
+	
+}
+.post-navigation {
+	
+}
+
+/*-----Feature Box Styles-----*/
+.feature-box {
+	background: #eee;
+	height: 200px;	
+}
+
+/*-----Comment Styles-----*/
+#comments {
+	
+}
+li.comment {
+	
+}
+.odd {
+	
+}
+.even {
+	
+}
+.author-comment {
+	
+}
+.comment-text {
+	
+}
+.comment-meta {
+	
+}
+p.gravatar {
+	
+}
+.waiting-for-approval {
+	
+}
+#trackbacks {
+	
+}
+li.trackback {
+	
+}
+p#no-comments {
+	
+}
+
+/*-----Comment Form Styles-----*/
+#comments-form {
+	
+}
+#respond {
+	
+}
+.cancel-comment-reply {
+	
+}
+
+/*-----Page Specific Styles-----*/
+.page {
+	
+}
+#page-content {
+	
+}
+#page-meta {
+	
+}
+
+/*-----Post Specific Styles-----*/
+.post {
+	
+}
+.postContent {
+	
+}
+.post-excerpt {
+	
+}
+
+/*-----Post Listing Styles-----*/
+nav.oldernewer {
+	
+}
+.older {
+	
+}
+.newer {
+	
+}
+
+/*-----Search Form Styles-----*/
+.search {
+	
+}
+
+/*-----Author Profile Styles-----*/
+.author {
+	
+}
+#recent-author-posts {
+	
+}
+#recent-author-comments {
+	
+}
+
+/*-----404 Page Styles-----*/
+#error404 {
+	
+}
+
+/*-----Sidebar Styles-----*/
+#sidebar {
+	background: #ccc;
+}
+#widget-sidebar {
+	
+}
+#sidebar-search {
+	
+}
+#sidebar-nav {
+	
+}
+#sidebar-archives {
+	
+}
+#sidebar-meta {
+	
+}
+.widget {
+	
+}
+.widget-area {
+	
+}
+
+/*-----Footer Styles-----*/
+#footer-wrap {
+		
+}
+
+footer {
+	background: #666;
+}
+#widget-footer {
+	
+}
+#footer-nav {
+	
+}
+
+/*-----Archive/Category/Search Listing Styles-----*/
+.no-results {
+	
+}
+
+.hide {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+/* Always remember to compress your live stylesheet and keep an uncompressed backup */
