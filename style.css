@@ -1,28 +1,11 @@
 @charset utf-8;
 /*
 Theme Name: Martini Custom Framework
-Theme URI: http://whiteboardframework.com/
-Author: Bold Perspective
-Author URI: http://boldperspective.com/
-Description: The Whiteboard Famework for Wordpress is built to speed up the process of developing a Wordpress theme. Whiteboard does so by eliminating the time spent on Wordpress' backend PHP by including what is common to all Wordpress powered Web sites with nothing extra.
-Version: 3.1.3
+Theme URI: http://martinicreative.com/
+Author: Martini Creative
+Author URI: http://martinicreative.com/
+Version: 2.0.0 (Blueberrytini)
 
- * Built on the Whiteboard Framework
- * http://whiteboardframework.com
- */
-
-/*
- * The Whiteboard Framework is licensed under the GPL license.
- * Feel free to use the Whiteboard Framework for commercial and non-commercial ventures.
- * We require a link in the CSS file and request a link on the website
-*/
-
-/*
-List of divs in Whiteboard
-Note that this list does not include the dynamically generated ids and classes, such as the body classes, the post ids, etc
-*/
-
-/*
 NOTE: This stylesheet should only include styles pertaining to visual elements of the website, not the overall layout and positioning of the containing elements on the site. 
 Examples of appropriate styles to be put here include:
 	* Backgrounds
