@@ -63,16 +63,6 @@
 	
 	//Allows wordpress to handle the inclusion of the javascript libraries
 	function include_js_files() {
-		//Register Javascript libraries
-		
-		//Lock the jquery version to local
-		//This prevents plugins from changing the jquery version and breaking the site
-		//The version number here should correspond with the version number in /wp-includes/script-loader.php
-		if( !is_admin()){
-	    	wp_deregister_script('jquery');
-	    	wp_register_script('jquery', (includes_url().'js/jquery/jquery.js'), false, '1.8.3');
-		}
-		
 		//Register Javascript Files
 		wp_register_script('jquery-init', get_template_directory_uri().'/js/jquery-init.js', array('jquery'));
 		wp_register_script('nivoslider', get_template_directory_uri().'/js/jquery.nivo.slider.pack.js', array('jquery-init'));
