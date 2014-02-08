@@ -38,17 +38,17 @@
 	
 	// Add first/last classes to the nav menus
 	function nav_menu_add_classes( $items, $args ) {
-	    //Add first item class
-	    $items[1]->classes[] = 'menu-item-first';
-	
-	    //Add last item class
-	    $i = count($items);
-	    while($items[$i]->menu_item_parent != 0 && $i > 0) {
-	        $i--;
-	    }
-	    $items[$i]->classes[] = 'menu-item-last';
-	
-	    return $items;
+		//Add first item class
+		$items[1]->classes[] = 'menu-item-first';
+		
+		//Add last item class
+		$i = count($items);
+		while($items[$i]->menu_item_parent != 0 && $i > 0) {
+			$i--;
+		}
+		$items[$i]->classes[] = 'menu-item-last';
+		
+		return $items;
 	}
 	add_filter( 'wp_nav_menu_objects', 'nav_menu_add_classes', 10, 2 );
 	
@@ -188,4 +188,3 @@
 	}
 	remove_all_actions( 'do_feed_rss2' );
 	add_action( 'do_feed_rss2', 'custom_feed_rss2', 10, 1 );
-?>
