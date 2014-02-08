@@ -52,14 +52,14 @@
 	}
 	add_filter( 'wp_nav_menu_objects', 'nav_menu_add_classes', 10, 2 );
 	
-	// removes detailed login error information for security
+	//Removes detailed login error information for security
 	add_filter('login_errors',create_function('$a', "return null;"));
 	
-	// removes the WordPress version from your header for security
-	function wb_remove_version() {
+	//Removes the WordPress version from your header for security
+	function remove_version() {
 		return '';
 	}
-	add_filter('the_generator', 'wb_remove_version');
+	add_filter('the_generator', 'remove_version');
 	
 	//Allows wordpress to handle the inclusion of the javascript libraries
 	function include_js_files() {
@@ -126,8 +126,13 @@
 		get_bloginfo('template_directory') . '/js/jquery.nivo.slider.init.js',
 		array('nivo-slider'));
 	
-	// Removes Trackbacks from the comment cout
-	add_filter('get_comments_number', 'comment_count', 0);
+	//Completely Disable Trackbacks
+	function disable_all_trackbacks($open, $post_id) {
+		return false;
+	}
+	add_filter('pings_open', 'disable_all_trackbacks', 10, 2);
+	
+	//Removes Trackbacks from the comment count
 	function comment_count( $count ) {
 		if ( ! is_admin() ) {
 			global $id;
@@ -137,6 +142,7 @@
 			return $count;
 		}
 	}
+	add_filter('get_comments_number', 'comment_count', 0);
 	
 	// custom excerpt ellipses for 2.9+
 	function custom_excerpt_more($more) {
