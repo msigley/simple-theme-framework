@@ -167,4 +167,25 @@
 		return $class;
 	}
 	add_filter( 'body_class', 'mytheme_body_class' );
+	
+	//Custom RSS2 Feed Templates
+	function custom_feed_rss2( $for_comments ) {
+		//Doesn't support custom comments rss templates
+		if( $for_comments ) {
+			do_feed_rss2( $for_comments );
+			return;
+		}	
+		
+		$post_type = get_query_var( 'post_type' );
+	    $rss_template = get_template_directory() . '/feeds/feed-'.$post_type.'-rss2.php';
+	    $default_rss_template = get_template_directory() . '/feeds/feed-rss2.php';
+	    if( file_exists( $rss_template ) )
+	        load_template( $rss_template ); // Load post type specific template
+	    elseif( file_exists( $default_rss_template ) )
+	    	load_template( $default_rss_template ); // Load catch all template
+	    else
+	        do_feed_rss2( $for_comments ); // Call default function
+	}
+	remove_all_actions( 'do_feed_rss2' );
+	add_action( 'do_feed_rss2', 'custom_feed_rss2', 10, 1 );
 ?>
