@@ -63,14 +63,17 @@
 	
 	//Allows wordpress to handle the inclusion of the javascript libraries
 	function include_js_files() {
+		//Set Version to Date for Browser Caching
+		$version_number = date('ymd', current_time('timestamp'));
+			
 		//Register Javascript Files
-		wp_register_script('jquery-init', get_template_directory_uri().'/js/jquery-init.js', array('jquery'));
-		wp_register_script('nivoslider', get_template_directory_uri().'/js/jquery.nivo.slider.pack.js', array('jquery-init'));
-		wp_register_script('nivoslider-init', get_template_directory_uri().'/js/jquery.nivo.slider.pack-init.js', array('nivoslider'));
-		wp_register_script('ddsmoothmenu', get_template_directory_uri().'/js/ddsmoothmenu.js', array('jquery-init'));
-		wp_register_script('ddsmoothmenu-init', get_template_directory_uri().'/js/ddsmoothmenu-init.js', array('ddsmoothmenu'));
-		wp_register_script('googlewebfonts-config', get_template_directory_uri().'/js/google.webfonts-config.js', false);
-		wp_register_script('googlewebfonts', get_template_directory_uri().'/js/google.webfonts.js', array('googlewebfonts-config'));
+		wp_register_script('jquery-init', get_template_directory_uri().'/js/jquery-init.js', array('jquery'), $version_number);
+		wp_register_script('nivoslider', get_template_directory_uri().'/js/jquery.nivo.slider.pack.js', array('jquery-init'), $version_number);
+		wp_register_script('nivoslider-init', get_template_directory_uri().'/js/jquery.nivo.slider.pack-init.js', array('nivoslider'), $version_number);
+		wp_register_script('ddsmoothmenu', get_template_directory_uri().'/js/ddsmoothmenu.js', array('jquery-init'), $version_number);
+		wp_register_script('ddsmoothmenu-init', get_template_directory_uri().'/js/ddsmoothmenu-init.js', array('ddsmoothmenu'), $version_number);
+		wp_register_script('googlewebfonts-config', get_template_directory_uri().'/js/google.webfonts-config.js', false, $version_number);
+		wp_register_script('googlewebfonts', get_template_directory_uri().'/js/google.webfonts.js', array('googlewebfonts-config'), $version_number);
 		
 		//Enqueue Javascript Files
 		wp_enqueue_script('nivoslider-init');
@@ -81,12 +84,15 @@
 	
 	//Allows wordpress to handle the inclusion of the CSS libraries
 	function include_css_files() {
+		//Set Version to Date for Browser Caching
+		$version_number = date('ymd', current_time('timestamp'));
+		
 		//Register CSS Libraries
-		wp_register_style('reset', get_template_directory_uri().'/css/reset.css');
-		wp_register_style('960-grid', get_template_directory_uri().'/css/960_24_col.css');
-		wp_register_style('oocss-spacing', get_template_directory_uri().'/css/spacing.css');
-		wp_register_style('oocss-typography', get_template_directory_uri().'/css/typography.css');
-		wp_register_style('ddsmoothmenu', get_template_directory_uri().'/css/ddsmoothmenu.css');
+		wp_register_style('reset', get_template_directory_uri().'/css/reset.css', false, $version_number);
+		wp_register_style('960-grid', get_template_directory_uri().'/css/960_24_col.css', false, $version_number);
+		wp_register_style('oocss-spacing', get_template_directory_uri().'/css/spacing.css', false, $version_number);
+		wp_register_style('oocss-typography', get_template_directory_uri().'/css/typography.css', false, $version_number);
+		wp_register_style('ddsmoothmenu', get_template_directory_uri().'/css/ddsmoothmenu.css', false, $version_number);
 		
 		//Enqueue Styles
 		wp_enqueue_style('reset');
@@ -96,25 +102,6 @@
 		wp_enqueue_style('ddsmoothmenu');
 	}
 	add_action('wp_print_styles', 'include_css_files');
-	
-	//Register ddsmoothmenu javascript for dropdown menus
-	wp_register_script('ddsmoothmenu', 
-		get_bloginfo('template_directory') . '/js/ddsmoothmenu.js');
-	wp_register_script('ddsmoothmenu-init', 
-		get_bloginfo('template_directory') . '/js/ddsmoothmenu-init.js',
-		array('ddsmoothmenu'));
-	
-	//Register jQuery init javascript for turning jQuery's noConflict mode off
-	wp_register_script('jquery-init', 
-		get_bloginfo('template_directory') . '/js/jquery-init.js',
-		array('jquery'));
-	
-	//Register Nivo Slider for JQuery Image Slideshows
-	wp_register_script('nivo-slider', 
-		get_bloginfo('template_directory') . '/js/jquery.nivo.slider.pack.js');
-	wp_register_script('nivo-slider-init',
-		get_bloginfo('template_directory') . '/js/jquery.nivo.slider.init.js',
-		array('nivo-slider'));
 	
 	//Completely Disable Trackbacks
 	function disable_all_trackbacks($open, $post_id) {
