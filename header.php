@@ -6,9 +6,9 @@ $page_title = '';
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--Force IE to not use compatibility mode. This must always be the first line in the head.-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /><?php /* Force IE to not use compatibility mode. This must always be the first line in the head. */ ?>
 	<?php
-	$page_title = wp_title('', false);
+	$page_title = wp_title('', false); //Page title is structured in SEO plugin.
 	?>
 	<title><?php echo $page_title; ?></title>
 	<meta name="googlebot" content="NOODP" />
