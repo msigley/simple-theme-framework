@@ -72,7 +72,12 @@ executelink: function($, prevobjs, e){
 	while(--prevscount > -1){
 		if(prevobjs[prevscount] === this){
 			prevobjs.splice(prevscount, 1);
-			if(link.href !== ddsmoothmenu.emptyhash && link.href && $(link).is('a') && !$(link).children('span.' + ddsmoothmenu.arrowimages.down[0] +', span.' + ddsmoothmenu.arrowimages.right[0]).length){
+			if(link.href !== ddsmoothmenu.emptyhash 
+				&& link.href 
+				&& $(link).is('a') 
+				&& !$(link).children('span').hasClass(ddsmoothmenu.arrowimages.down[0]).length
+				&& !$(link).children('span').hasClass(ddsmoothmenu.arrowimages.right[0]).length
+				){
 				if(link.target && link.target !== '_self'){
 					window.open(link.href, link.target);
 				} else {
