@@ -67,10 +67,9 @@
 		$version_number = date('ymd', current_time('timestamp'));
 			
 		//Register Javascript Files
-		wp_register_script('jquery-init', get_template_directory_uri().'/js/jquery-init.js', array('jquery'), $version_number);
-		wp_register_script('nivoslider', get_template_directory_uri().'/js/jquery.nivo.slider.pack.js', array('jquery-init'), $version_number);
+		wp_register_script('nivoslider', get_template_directory_uri().'/js/jquery.nivo.slider.pack.js', array('jquery'), $version_number);
 		wp_register_script('nivoslider-init', get_template_directory_uri().'/js/jquery.nivo.slider.pack-init.js', array('nivoslider'), $version_number);
-		wp_register_script('ddsmoothmenu', get_template_directory_uri().'/js/ddsmoothmenu.js', array('jquery-init'), $version_number);
+		wp_register_script('ddsmoothmenu', get_template_directory_uri().'/js/ddsmoothmenu.js', array('jquery'), $version_number);
 		wp_register_script('ddsmoothmenu-init', get_template_directory_uri().'/js/ddsmoothmenu-init.js', array('ddsmoothmenu'), $version_number);
 		wp_register_script('googlewebfonts-config', get_template_directory_uri().'/js/google.webfonts-config.js', false, $version_number);
 		wp_register_script('googlewebfonts', get_template_directory_uri().'/js/google.webfonts.js', array('googlewebfonts-config'), $version_number);

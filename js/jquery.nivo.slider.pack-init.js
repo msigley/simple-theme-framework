@@ -1,4 +1,4 @@
-$(window).load(function() {
+jQuery(window).load(function() {
     $('#slider').nivoSlider({
         effect:'random', // Specify sets like: 'fold,fade,sliceDown'
         slices:15, // For slice animations
