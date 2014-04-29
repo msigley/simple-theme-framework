@@ -41,6 +41,7 @@
 // 	repositionv: false,
 //** in the init. Sub menus that are vertically repositioned will have the class 'repositionedv' added to them.
 
+var $ = jQuery.noConflict();
 var ddsmoothmenu = {
 
 ///////////////////////// Global Configuration Options: /////////////////////////
