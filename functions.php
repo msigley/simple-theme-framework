@@ -98,6 +98,7 @@
 		wp_register_style('oocss-spacing', $theme_css_dir . 'spacing.css', false, $version_number);
 		wp_register_style('oocss-typography', $theme_css_dir . 'typography.css', false, $version_number);
 		wp_register_style('ddsmoothmenu', $theme_css_dir . 'ddsmoothmenu.css', false, $version_number);
+		wp_register_style('theme-styles', get_stylesheet_uri(), false, $version);
 	}
 	function include_css_files() {
 		//Register CSS Libraries
@@ -109,6 +110,7 @@
 		wp_enqueue_style('oocss-spacing');
 		wp_enqueue_style('oocss-typography');
 		wp_enqueue_style('ddsmoothmenu');
+		wp_enqueue_style('theme-styles');
 	}
 	add_action('wp_print_styles', 'include_css_files');
 	

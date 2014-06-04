@@ -107,9 +107,6 @@ $page_title = '';
 		<?php endif; ?>
 	<![endif]-->
 	<?php wp_head(); ?>
-	
-	<!--Theme CSS-->
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 </head>
 
 <body <?php body_class(); ?>>
