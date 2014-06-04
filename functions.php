@@ -62,17 +62,22 @@
 	add_filter('the_generator', 'remove_version');
 	
 	//Allows wordpress to handle the inclusion of the javascript libraries
-	function include_js_files() {
+	function register_js_files() {
+		$theme_js_dir = get_template_directory_uri().'/js/';
+		
 		//Set Version to Date for Browser Caching
 		$version_number = date('ymd', current_time('timestamp'));
-			
+		
+		wp_register_script('nivoslider', $theme_js_dir . 'jquery.nivo.slider.pack.js', array('jquery'), $version_number);
+		wp_register_script('nivoslider-init', $theme_js_dir . 'jquery.nivo.slider.pack-init.js', array('nivoslider'), $version_number);
+		wp_register_script('ddsmoothmenu', $theme_js_dir . 'ddsmoothmenu.js', array('jquery'), $version_number);
+		wp_register_script('ddsmoothmenu-init', $theme_js_dir . 'ddsmoothmenu-init.js', array('ddsmoothmenu'), $version_number);
+		wp_register_script('googlewebfonts-config', $theme_js_dir . 'google.webfonts-config.js', false, $version_number);
+		wp_register_script('googlewebfonts', $theme_js_dir . 'google.webfonts.js', array('googlewebfonts-config'), $version_number);
+	}
+	function include_js_files() {
 		//Register Javascript Files
-		wp_register_script('nivoslider', get_template_directory_uri().'/js/jquery.nivo.slider.pack.js', array('jquery'), $version_number);
-		wp_register_script('nivoslider-init', get_template_directory_uri().'/js/jquery.nivo.slider.pack-init.js', array('nivoslider'), $version_number);
-		wp_register_script('ddsmoothmenu', get_template_directory_uri().'/js/ddsmoothmenu.js', array('jquery'), $version_number);
-		wp_register_script('ddsmoothmenu-init', get_template_directory_uri().'/js/ddsmoothmenu-init.js', array('ddsmoothmenu'), $version_number);
-		wp_register_script('googlewebfonts-config', get_template_directory_uri().'/js/google.webfonts-config.js', false, $version_number);
-		wp_register_script('googlewebfonts', get_template_directory_uri().'/js/google.webfonts.js', array('googlewebfonts-config'), $version_number);
+		register_js_files();
 		
 		//Enqueue Javascript Files
 		wp_enqueue_script('nivoslider-init');
@@ -82,16 +87,21 @@
 	add_action('wp_enqueue_scripts', 'include_js_files');
 	
 	//Allows wordpress to handle the inclusion of the CSS libraries
-	function include_css_files() {
+	function register_css_files() {
+		$theme_css_dir = get_template_directory_uri().'/css/';
+		
 		//Set Version to Date for Browser Caching
 		$version_number = date('ymd', current_time('timestamp'));
 		
+		wp_register_style('reset', $theme_css_dir . 'reset.css', false, $version_number);
+		wp_register_style('960-grid', $theme_css_dir . '960_24_col.css', false, $version_number);
+		wp_register_style('oocss-spacing', $theme_css_dir . 'spacing.css', false, $version_number);
+		wp_register_style('oocss-typography', $theme_css_dir . 'typography.css', false, $version_number);
+		wp_register_style('ddsmoothmenu', $theme_css_dir . 'ddsmoothmenu.css', false, $version_number);
+	}
+	function include_css_files() {
 		//Register CSS Libraries
-		wp_register_style('reset', get_template_directory_uri().'/css/reset.css', false, $version_number);
-		wp_register_style('960-grid', get_template_directory_uri().'/css/960_24_col.css', false, $version_number);
-		wp_register_style('oocss-spacing', get_template_directory_uri().'/css/spacing.css', false, $version_number);
-		wp_register_style('oocss-typography', get_template_directory_uri().'/css/typography.css', false, $version_number);
-		wp_register_style('ddsmoothmenu', get_template_directory_uri().'/css/ddsmoothmenu.css', false, $version_number);
+		register_css_files();
 		
 		//Enqueue Styles
 		wp_enqueue_style('reset');
