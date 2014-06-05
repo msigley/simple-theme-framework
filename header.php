@@ -97,15 +97,6 @@ $page_title = '';
 	<link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'atom_url' ); ?>" />
-    
-	<?php /* The HTML5 Shim is required for older browsers, mainly older versions IE */ ?>
-	<!--[if lt IE 9]>
-		<?php if(is_ssl()): ?>
-			<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<?php else: ?>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<?php endif; ?>
-	<![endif]-->
 	<?php wp_head(); ?>
 </head>
 
