@@ -75,6 +75,7 @@
 		wp_register_script('googlewebfonts-config', $theme_js_dir . 'google.webfonts-config.js', false, $version_number);
 		wp_register_script('googlewebfonts', $theme_js_dir . 'google.webfonts.js', array('googlewebfonts-config'), $version_number);
 	}
+	
 	function include_js_files() {
 		//Register Javascript Files
 		register_js_files();
@@ -85,6 +86,18 @@
 		wp_enqueue_script('googlewebfonts');
 	}
 	add_action('wp_enqueue_scripts', 'include_js_files');
+	
+	function print_conditional_js() {
+		//Set version numbers to YYYYMMDD. This allows for better browser caching and easier maintenance.
+		$version = date('Ymd', current_time('timestamp'));
+		
+		?>
+		<!--[if lt IE 9]>
+		<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/html5shiv-printshiv.js?ver=<?php echo $version; ?>'></script>
+		<![endif]-->
+		<?php
+	}
+	add_action('wp_print_scripts', 'print_conditional_js');
 	
 	//Allows wordpress to handle the inclusion of the CSS libraries
 	function register_css_files() {
@@ -100,6 +113,7 @@
 		wp_register_style('ddsmoothmenu', $theme_css_dir . 'ddsmoothmenu.css', false, $version_number);
 		wp_register_style('theme-styles', get_stylesheet_uri(), false, $version);
 	}
+	
 	function include_css_files() {
 		//Register CSS Libraries
 		register_css_files();
