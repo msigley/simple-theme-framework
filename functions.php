@@ -107,7 +107,7 @@
 		$version_number = date('ymd', current_time('timestamp'));
 		
 		wp_register_style('reset', $theme_css_dir . 'reset.css', false, $version_number);
-		wp_register_style('960-grid', $theme_css_dir . '960_24_col.css', false, $version_number);
+		wp_register_style('960-grid', $theme_css_dir . '960_custom_12_col.css', false, $version_number);
 		wp_register_style('oocss-spacing', $theme_css_dir . 'spacing.css', false, $version_number);
 		wp_register_style('oocss-typography', $theme_css_dir . 'typography.css', false, $version_number);
 		wp_register_style('ddsmoothmenu', $theme_css_dir . 'ddsmoothmenu.css', false, $version_number);
