@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div id="content" class="grid_16 fs14 lh18">
+	<div id="content" class="grid_8 fs14 lh18">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post-single">
 				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -44,14 +44,4 @@
 	</div><!--#content-->
 	
 	<?php get_sidebar(); ?>
-
-	<div id="feature-boxes">
-    	<div class="feature-box grid_8">
-        </div>
-        <div class="feature-box grid_8">
-        </div>
-        <div class="feature-box grid_8">
-        </div>
-    </div>
-    
 <?php get_footer(); ?>

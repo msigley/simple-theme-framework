@@ -1,4 +1,4 @@
-<div id="sidebar" class="left">
+<div id="sidebar" class="grid_4 left">
 	<?php if ( ! dynamic_sidebar( 'Sidebar' )) : ?>
 		<ul class="xoxo">
             <li id="sidebar-search" class="widget">
