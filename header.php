@@ -106,7 +106,7 @@ $page_title = '';
             <h1><?php bloginfo( 'site_title' ); ?></h1>
         </header>
         
-        <nav id="nav-primary" class="nav grid_24 mbm">
+        <nav id="nav-primary" class="nav grid_12 mbm">
             <!--Primary Navigation-->
             <?php wp_nav_menu( array( 'container_id' => 'menu', 'container_class' => 'ddsmoothmenu', 'theme_location' => 'header-menu' ) ); ?>
         </nav><!--#nav-primary-->
