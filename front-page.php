@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-	<div id="bighead" class="grid_24">
+	<div id="bighead" class="grid_12">
     
     </div>
 
-	<div id="content" class="grid_16">
+	<div id="content" class="grid_12">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post-single">
 				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -49,7 +49,5 @@
 	</div><!--#content-->
 	
 	<?php get_sidebar(); ?>
-
-	<?php get_template_part('feature_boxes', ''); ?>
 
 <?php get_footer(); ?>

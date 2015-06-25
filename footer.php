@@ -1,7 +1,7 @@
 	</div><!--#content-wrap-->
 </div><!--#wrapper-->
-<div id="footer-wrap" class="container_24">
-	<footer class="grid_24">
+<div id="footer-wrap" class="container_12">
+	<footer class="grid_12">
 		&copy; <?php echo date("Y") ?> <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.
 	</footer>
 </div><!--#footer-wrap-->

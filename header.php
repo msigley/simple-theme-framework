@@ -101,8 +101,8 @@ $page_title = '';
 </head>
 
 <body <?php body_class(); ?>>
-    <div id="wrapper" class="container_24"><!-- this encompasses the entire website except #footer -->
-        <header class="grid_24 mbm">
+    <div id="wrapper" class="container_12"><!-- this encompasses the entire website except #footer -->
+        <header class="grid_12 mbm">
             <h1><?php bloginfo( 'site_title' ); ?></h1>
         </header>
         
@@ -111,4 +111,4 @@ $page_title = '';
             <?php wp_nav_menu( array( 'container_id' => 'menu', 'container_class' => 'ddsmoothmenu', 'theme_location' => 'header-menu' ) ); ?>
         </nav><!--#nav-primary-->
         
-        <div id="content-wrap" class="container_24 mbm">
+        <div id="content-wrap" class="container_12 mbm">
