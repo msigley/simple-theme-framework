@@ -10,15 +10,6 @@
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
 		));
-		
-		// Mobile Sidebar Widget
-		// Location: the mobile sidebar
-		register_sidebar(array('name'=>'Mobile Sidebar',
-			'before_widget' => '<div class="widget-area widget-sidebar"><ul>',
-			'after_widget' => '</ul></div>',
-			'before_title' => '<h3>',
-			'after_title' => '</h3>',
-		));
 
 	}
 
